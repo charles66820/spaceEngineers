@@ -1,5 +1,5 @@
 public Program() {
-  Runtime.UpdateFrequency = UpdateFrequency.Update10;
+    Runtime.UpdateFrequency = UpdateFrequency.Update10;
 }
 
 bool toggle = true;
