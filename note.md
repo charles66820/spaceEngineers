@@ -7,3 +7,8 @@
 * gray : disable
 * blue :
 * red : break
+
+## Docs
+
+* <https://github.com/malware-dev/MDK-SE/wiki/Namespace-Index>
+* <https://github.com/malware-dev/MDK-SE/wiki/Api-Index>

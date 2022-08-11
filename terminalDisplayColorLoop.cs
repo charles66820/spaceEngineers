@@ -5,16 +5,16 @@ public Program() {
 bool toggle = true;
 
 public void Main(string argument, UpdateType updateSource) {
-    IMyTextSurfaceProvider testSurfaceProvinder = Me as IMyTextSurfaceProvider; // Me || GridTerminalSystem 
+    IMyTextSurfaceProvider testSurfaceProvinder = Me as IMyTextSurfaceProvider;
     Echo(testSurfaceProvinder.SurfaceCount.ToString());
     Echo(testSurfaceProvinder.UseGenericLcd.ToString());
-   
-    IMyTextSurface display = testSurfaceProvinder.GetSurface(0) as IMyTextSurface;
-    IMyTextSurface keyboard = testSurfaceProvinder.GetSurface(1) as IMyTextSurface;
+
+    IMyTextSurface display = testSurfaceProvinder.GetSurface(0) as IMyTextSurface; // Me.GetSurface(0) as IMyTextSurface;
+    IMyTextSurface keyboard = testSurfaceProvinder.GetSurface(1) as IMyTextSurface; // Me.GetSurface(1) as IMyTextSurface;
 
     display.ContentType = ContentType.TEXT_AND_IMAGE;
     keyboard.ContentType = ContentType.TEXT_AND_IMAGE;
-    
+
     // ContentType.NONE
     // ContentType.SCRIPT
     // ContentType.TEXT_AND_IMAGE
@@ -23,6 +23,7 @@ public void Main(string argument, UpdateType updateSource) {
     display.Font = "Monospace";
     display.FontSize = 6;
     display.WriteText("test");
+    display.Alignment = TextAlignment.CENTER;
 
     if (toggle) {
         display.BackgroundColor = Color.Blue;
