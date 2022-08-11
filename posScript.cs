@@ -1,5 +1,4 @@
 public Program() {
-    //RuntimeInfo.UpdateFrequency
     Runtime.UpdateFrequency = UpdateFrequency.Update1;
 }
 
