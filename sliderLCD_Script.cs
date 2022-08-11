@@ -14,7 +14,13 @@ int delta = 10;
 
 public void Main(string argument, UpdateType updateSource) {
     if (count % delta == 0) {
-        if (lcd == null) lcd = GridTerminalSystem.GetBlockWithName("sliderLCD") as IMyTextPanel;
+        if (lcd == null) {
+            lcd = GridTerminalSystem.GetBlockWithName("sliderLCD") as IMyTextPanel;
+            lcd.ContentType = ContentType.TEXT_AND_IMAGE;
+            lcd.Font = "Monospace";
+            lcd.FontSize = 0.100F;
+            lcd.Alignment = TextAlignment.CENTER;
+        }
 
         if (lcd != null) {
             if (images.Any()) {
