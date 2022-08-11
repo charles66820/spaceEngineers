@@ -1,5 +1,5 @@
 public Program() {
-    //Runtime.UpdateFrequency = <UpdateFrequency>;
+    // Runtime.UpdateFrequency = <UpdateFrequency>;
     // <UpdateFrequency> list :
     // UpdateFrequency.None // Does not run autonomously.
     // UpdateFrequency.Once, // Run once before the next tick. Flag is un-set automatically after the update
